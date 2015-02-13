@@ -1,3 +1,4 @@
+
 table#board {
 	border: 1px solid black;
   margin: auto;
@@ -13,14 +14,23 @@ td, tr {
   margin: auto;
 	width: 500px;
 	/*border: 1px solid black;*/
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 .mouth {
-  width: 35px;
-  height: 35px;
-  border: 1px solid black;
-  display: inline-block;
+  border: 4px ridge black;
+}
+
+.mouth-hover {
+  border: 4px ridge #6FA177;
+}
+
+#pieces {
+  /*border: 1px solid black;*/
+  margin-left: calc(-15px + 50%);
+  position: relative;
+  margin-top: 20%;
+  width: 34px;
 }
 
 /*Piece Style*/
@@ -36,18 +46,18 @@ td, tr {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: #AB0000;
+  background: #955251;
   box-shadow: 1px 1px 1px 1px gray;
-  border: 2px ridge #DE0000;
+  border: 2px ridge #CF7270;
 }
 
 .bluePiece {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: #2E3DA1;
+  background: #899FAE;
   box-shadow: 1px 1px 1px 1px gray;
-  border: 2px ridge #2E69A1;
+  border: 2px ridge #B3CFE3;
 }
 
 
@@ -82,6 +92,7 @@ td, tr {
 #title:hover {
   cursor: pointer;
   letter-spacing: 20px;
+  color: #6FA177;
 }
 #title:hover:before {
   width: 515px;
