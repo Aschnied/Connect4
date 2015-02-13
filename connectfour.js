@@ -1,9 +1,10 @@
+
 // Move alternates between Users
 // Win check after each move
 // --Stretch--
 // Users have the option to play against the computer
 // Users are notified when there is no possible way for either to win a game
-
+$(document).ready(function() {
 
 function Column(height){
   this.height = height;
@@ -94,3 +95,12 @@ redboard.place(ryan, 1)
 
 // var hannah = new Player("name")
 
+
+
+
+
+
+
+
+
+})
