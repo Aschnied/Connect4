@@ -1,10 +1,13 @@
-
 // Move alternates between Users
 // Win check after each move
 // --Stretch--
 // Users have the option to play against the computer
 // Users are notified when there is no possible way for either to win a game
+
 $(document).ready(function() {
+
+
+
 
 function Column(height){
   this.height = height;
@@ -19,8 +22,10 @@ Column.prototype.place = function(player){
   }
 }
 
-function Board(rows, cols){
+function Board(rows, cols, players){
   this.columns = this.createColumns(rows, cols);
+  this.players = players;
+  this.currentPlayer = players[0];
 }
 
 Board.prototype.createColumns = function(rows, cols) {
@@ -40,34 +45,35 @@ Board.prototype.place = function(player, col){
   }
 }
 
+
 // Player 1 = Red , Player 2 = Black
 // create a turn object
 // returning who's turn it is
 
-function Player(name) {
+function Player(name, active) {
   this.name = name;
-  this.current = true;
+  this.active = active;
 }
 
 Player.prototype.turn = function(){
-  if (this.current === true){
-      this.current = false;
-    } else {
-      this.current = "black";
+  if (this.active === true){
+      this.active = false;
     };
 }
 
+var hannah = new Player("hannah", true)
+var andrew = new Player("andrew",false)
 
-var hannah = new Player("hannah")
-var ryan = new Player("ryan")
+var players = [hannah, andrew]
 
 // hannah.current
 // hannah.turn()
 // hannah.current
 
-var redboard = new Board(2,1)
-redboard.place(hannah, 1)
-redboard.place(ryan, 1)
+var redboard = new Board(2,1,players)
+
+redboard.place(hannah,1)
+// redboard.place(andrew, 1)
 
 
 
